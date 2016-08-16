@@ -3,7 +3,8 @@ var app = express();
 
 var rootRouter = require('./routes/root')
 
-app.use('/', rootRouter)
+app.use(express.static('public'));
+app.use('/', rootRouter);
 
 app.listen(3000, function () {
   console.log("Server started, listening to port 3000... \n")
