@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-  res.json('Hello world')
-});
+var rootRouter = require('./routes/root')
+
+app.use('/', rootRouter)
 
 app.listen(3000, function () {
-  console.log("Server started, listening to port 3000... \n\n")
+  console.log("Server started, listening to port 3000... \n")
 });
