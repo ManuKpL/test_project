@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+require('dotenv').config();
 
 app.use(express.static('app'));
 app.use('/bower_components', express.static('bower_components'));
