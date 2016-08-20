@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-require('dotenv').config();
+require('dotenv').config({silent: true});
 
 app.use(express.static('app'));
 app.use('/bower_components', express.static('bower_components'));
