@@ -10,14 +10,15 @@
     <base href="/">
   </head>
   <body ng-app="testApp">
-    <div ng-controller="pagesController as pagesCtrl" ng-view>
+    <div class="page-container" ng-controller="pagesController as pagesCtrl" ng-view>
     </div>
-    <script src="angular/angular.js"></script>
-    <script src="angular-route/angular-route.js"></script>
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script src="frontApp.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script data-main="assets/javascripts/application" src="assets/javascripts/require.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUwSP81XNTYDkUYVXbBTWj2ni1nAmvSOs&libraries=visualization"></script>
+    <script type="text/javascript" src="angular/angular.js"></script>
+    <script type="text/javascript" src="angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="frontApp.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script data-main="assets/javascripts/application" type="text/javascript" src="assets/javascripts/require.js"></script>
   </body>
 </html>
