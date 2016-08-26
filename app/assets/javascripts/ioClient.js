@@ -7,6 +7,5 @@ client.on('hello', function() {
 client.on('new tweet', function(data) {
   var coordinates = new google.maps.LatLng(data.lng,data.lat);
   tweets.push(coordinates);
-  console.log(data);
 });
 
