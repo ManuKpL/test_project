@@ -21,6 +21,7 @@ var tw = require('./initializers/twitter');
 var stream = null;
 var paris = '2.24,48.82,2.42,48.90';
 var western_europe = '-4.63,39.83,17.02,53.12';
+var world = '-180,-90,180,90';
 var users = [];
 
 io.on('connection', function (client) {
