@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node api/app.js",
+    "postinstall": "bower install",
     "start-css": "npm run build-css && node api/app.js",
     "debug": "node-debug api/app.js",
     "build-css": "node-sass --include-path scss app/assets/stylesheets/application.scss app/assets/stylesheets/application.css"
