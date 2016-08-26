@@ -1,7 +1,7 @@
 var client = io.connect('http://localhost:3000')
-client.on('hello', function(data) {
+client.on('hello', function() {
   client.emit('start stream');
 });
-client.on('data', function(data) {
-  console.log(data);
+client.on('new tweet', function(coordinates) {
+  console.log(coordinates);
 });
