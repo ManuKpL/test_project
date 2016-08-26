@@ -1,1 +1,1 @@
-requirejs(['ioClient', 'map'], function () {});
+requirejs(['map','ioClient'], function () {});
