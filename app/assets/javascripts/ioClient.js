@@ -1,4 +1,4 @@
-var client = io.connect('http://localhost:3000')
+var client = io.connect(window.location.host)
 client.on('hello', function() {
   client.emit('start stream');
 });
