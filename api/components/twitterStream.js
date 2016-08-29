@@ -16,9 +16,22 @@ function startStream(location, client) {
       stream.on('data', function (data) {
         if (users.length > 0) {
           if (data.coordinates) {
-            var coordinates = {"lat": data.coordinates.coordinates[0],"lng": data.coordinates.coordinates[1]};
-            client.broadcast.emit('new tweet', coordinates);
-            client.emit('new tweet', coordinates);
+            var coordinates = {
+              "lat": data.coordinates.coordinates[0],
+              "lng": data.coordinates.coordinates[1]
+            };
+            client.broadcast.emit('precise tweet', coordinates);
+            client.emit('precise tweet', coordinates);
+          } else {
+            var bounding_box = data.place.bounding_box.coordinates[0];
+            var first = bounding_box[0];
+            var second = bounding_box[2];
+            var coordinates = {
+              "lat": (first[0] + second[0]) / 2,
+              "lng": (first[1] + second[1]) / 2
+            }
+            client.broadcast.emit('precise tweet', coordinates);
+            client.emit('precise tweet', coordinates);
           }
         } else {
           stream.destroy();
