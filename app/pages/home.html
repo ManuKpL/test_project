@@ -1,4 +1,12 @@
 <div class="legend text-center">
-  <span class="legend-count">{{counter}}</span> tweets
+  <p class='legend-counter' id='total-count'>
+    <span class="legend-count">{{counter}}</span> total located tweets
+  </p>
+  <p class='legend-counter' id='precise-count'>
+    <span class="legend-count">{{preciseCounter}}</span> geo located tweets
+  </p>
+  <p class='legend-counter' id='average-count'>
+    <span class="legend-count">{{averageCounter}}</span> city located tweets
+  </p>
 </div>
 <div id="worldMap"></div>

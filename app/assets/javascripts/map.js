@@ -5,6 +5,9 @@ var worldMap = new google.maps.Map(document.getElementById('worldMap'), {
   styles: style
 });
 
+var blueGradient = [ 'rgba(58, 83, 155, 0)', 'rgba(58, 83, 155, 1)', 'rgba(68,108,179, 1)', 'rgba(65, 131, 215, 1)', 'rgba(75, 119, 190, 1)']
+var redGradient = ['rgba(210, 77, 87, 0)', 'rgba(210, 77, 87, 1)', 'rgba(214, 69, 65, 1)', 'rgba(239, 72, 54, 1)', 'rgba(217, 30, 24, 1)']
+
 // AVERAGE HEAT MAP
 var worldAverageTweets = new google.maps.MVCArray();
 new google.maps.visualization.HeatmapLayer({
@@ -13,13 +16,7 @@ new google.maps.visualization.HeatmapLayer({
   maxIntensity: 5,
   opacity: 0.8,
   radius: 5,
-  gradient: [
-  'rgba(174, 97, 146, 0)',
-  'rgba(174, 97, 146, 1)',
-  'rgba(255, 148, 117, 1)',
-  'rgba(255, 211, 117, 1)',
-  'rgba(255, 234, 117, 1)'
-]
+  gradient: blueGradient
 });
 
 // PRECISE HEAT MAP
@@ -30,11 +27,5 @@ new google.maps.visualization.HeatmapLayer({
   maxIntensity: 5,
   opacity: 0.8,
   radius: 5,
-  gradient: [
-  'rgba(125, 128, 218, 0)',
-  'rgba(125, 128, 218, 1)',
-  'rgba(54, 133, 181, 1)',
-  'rgba(4, 113, 166, 1)',
-  'rgba(32, 138, 174, 1)'
-]
+  gradient: redGradient
 });

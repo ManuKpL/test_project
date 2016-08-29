@@ -5,7 +5,12 @@
   padding: 15px 10px;
   border-radius: 2px;
   color: rgba(200,200,200,0.7);
-  background-color: rgba(30,30,30,0.7);
+  background-color: rgba(30,30,30,0.5);
   font-size: 12px;
+  text-shadow: 1px 1px rgb(40,40,40), -1px -1px rgb(40,40,40), -1px 1px rgb(40,40,40), 1px -1px rgb(40,40,40);
   &-count { font-size: 14px }
+  &-counter { margin: 0 }
 }
+
+#precise-count { color: rgba(217, 30, 24, 0.7) }
+#average-count { color: rgba(75, 119, 190, 0.7) }
