@@ -13,7 +13,6 @@ var heatmap = new google.maps.visualization.HeatmapLayer({
     gradient: [
     'rgba(125, 128, 218, 0)',
     'rgba(125, 128, 218, 1)',
-    'rgba(4, 113, 166, 1)',
     'rgba(54, 133, 181, 1)',
     'rgba(54, 133, 181, 1)',
     'rgba(54, 133, 181, 1)',
