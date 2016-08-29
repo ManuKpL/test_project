@@ -1,0 +1,11 @@
+.legend {
+  z-index: 5;
+  width: 50vw;
+  max-width: 200px;
+  padding: 15px 10px;
+  border-radius: 2px;
+  color: rgba(200,200,200,0.7);
+  background-color: rgba(30,30,30,0.7);
+  font-size: 12px;
+  &-count { font-size: 14px }
+}
