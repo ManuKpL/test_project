@@ -30,8 +30,8 @@ function startStream(location, client) {
               "lat": (first[0] + second[0]) / 2,
               "lng": (first[1] + second[1]) / 2
             }
-            client.broadcast.emit('precise tweet', coordinates);
-            client.emit('precise tweet', coordinates);
+            client.broadcast.emit('average tweet', coordinates);
+            client.emit('average tweet', coordinates);
           }
         } else {
           stream.destroy();
