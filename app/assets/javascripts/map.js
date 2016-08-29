@@ -5,23 +5,6 @@ var worldMap = new google.maps.Map(document.getElementById('worldMap'), {
   styles: style
 });
 
-// PRECISE HEAT MAP
-var worldPreciseTweets = new google.maps.MVCArray();
-new google.maps.visualization.HeatmapLayer({
-  data: worldPreciseTweets,
-  map: worldMap,
-  maxIntensity: 5,
-  opacity: 0.8,
-  radius: 5,
-  gradient: [
-  'rgba(125, 128, 218, 0)',
-  'rgba(125, 128, 218, 1)',
-  'rgba(54, 133, 181, 1)',
-  'rgba(4, 113, 166, 1)',
-  'rgba(142, 249, 243, 1)'
-]
-});
-
 // AVERAGE HEAT MAP
 var worldAverageTweets = new google.maps.MVCArray();
 new google.maps.visualization.HeatmapLayer({
@@ -36,5 +19,22 @@ new google.maps.visualization.HeatmapLayer({
   'rgba(255, 148, 117, 1)',
   'rgba(255, 211, 117, 1)',
   'rgba(255, 234, 117, 1)'
+]
+});
+
+// PRECISE HEAT MAP
+var worldPreciseTweets = new google.maps.MVCArray();
+new google.maps.visualization.HeatmapLayer({
+  data: worldPreciseTweets,
+  map: worldMap,
+  maxIntensity: 5,
+  opacity: 0.8,
+  radius: 5,
+  gradient: [
+  'rgba(125, 128, 218, 0)',
+  'rgba(125, 128, 218, 1)',
+  'rgba(54, 133, 181, 1)',
+  'rgba(4, 113, 166, 1)',
+  'rgba(32, 138, 174, 1)'
 ]
 });
