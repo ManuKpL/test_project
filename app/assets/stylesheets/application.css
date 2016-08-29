@@ -5817,7 +5817,31 @@ button.close {
 
 .page-container {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
 
-#map {
+#worldMap {
   position: static !important; }
+
+.legend {
+  z-index: 5;
+  width: 50vw;
+  max-width: 200px;
+  padding: 15px 10px;
+  border-radius: 2px;
+  color: rgba(200, 200, 200, 0.7);
+  background-color: rgba(30, 30, 30, 0.5);
+  font-size: 12px;
+  text-shadow: 1px 1px #282828, -1px -1px #282828, -1px 1px #282828, 1px -1px #282828; }
+  .legend-count {
+    font-size: 14px; }
+  .legend-counter {
+    margin: 0; }
+
+#precise-count {
+  color: rgba(217, 30, 24, 0.7); }
+
+#average-count {
+  color: rgba(75, 119, 190, 0.7); }
