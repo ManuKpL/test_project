@@ -5,44 +5,37 @@ var map = new google.maps.Map(document.getElementById('map'), {
   styles: style
 });
 
-var tweets = new google.maps.MVCArray();
-var heatmap = new google.maps.visualization.HeatmapLayer({
-    data: tweets,
-    map: map,
-    radius: 5,
-    gradient: [
-    'rgba(125, 128, 218, 0)',
-    'rgba(125, 128, 218, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(54, 133, 181, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(4, 113, 166, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)',
-    'rgba(142, 249, 243, 1)'
-  ]
-  });
+
+// PRECISE HEAT MAP
+var preciseTweets = new google.maps.MVCArray();
+new google.maps.visualization.HeatmapLayer({
+  data: preciseTweets,
+  map: map,
+  maxIntensity: 5,
+  opacity: 0.8,
+  radius: 5,
+  gradient: [
+  'rgba(125, 128, 218, 0)',
+  'rgba(125, 128, 218, 1)',
+  'rgba(54, 133, 181, 1)',
+  'rgba(4, 113, 166, 1)',
+  'rgba(142, 249, 243, 1)'
+]
+});
+
+// AVERAGE HEAT MAP
+var averageTweets = new google.maps.MVCArray();
+new google.maps.visualization.HeatmapLayer({
+  data: averageTweets,
+  map: map,
+  maxIntensity: 5,
+  opacity: 0.8,
+  radius: 5,
+  gradient: [
+  'rgba(174, 97, 146, 0)',
+  'rgba(174, 97, 146, 1)',
+  'rgba(255, 148, 117, 1)',
+  'rgba(255, 211, 117, 1)',
+  'rgba(255, 234, 117, 1)'
+]
+});
