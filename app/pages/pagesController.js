@@ -1,5 +1,4 @@
-testApp.controller('pagesController', function () {
-  var client = io.connect(window.location.host);
+testApp.controller('pagesController', function ($scope, client) {
   client.on('hello', function (location) {
     client.emit('start stream', location);
   });
@@ -7,5 +6,8 @@ testApp.controller('pagesController', function () {
   client.on('new tweet', function(data) {
     var coordinates = new google.maps.LatLng(data.lng,data.lat);
     tweets.push(coordinates);
+  });
+  $scope.$on('$destroy', function (event) {
+    client.removeAllListeners();
   });
 });
