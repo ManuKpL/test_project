@@ -5823,7 +5823,9 @@ button.close {
   justify-content: center; }
 
 #worldMap {
-  position: static !important; }
+  position: absolute !important;
+  height: 100%;
+  width: 100%; }
 
 .legend {
   z-index: 5;
