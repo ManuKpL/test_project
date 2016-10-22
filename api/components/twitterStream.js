@@ -35,11 +35,15 @@ function startStream(location, client) {
           }
         } else {
           stream.destroy();
-          stream = null;
         }
       });
       stream.on('destroy', function (response) {
+        console.log('Stream destroyed');
+        stream = null;
+      });
+      stream.on('end', function (response) {
         console.log('Stream ended');
+        stream = null;
       });
     });
   }
